@@ -1,0 +1,129 @@
+<header class="header">
+  <div class="container header__container">
+    <a
+      href="#home"
+      class="header__logo"
+      aria-label="to Home"
+      data-i18n="nav-logo-aria"
+      data-i18n-attr="aria-label"
+    >
+      <img src="logo.webp" class="header__logo-img" alt="Logo SOS Game" />
+    </a>
+
+    <nav class="header__menu" aria-label="Main-menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <a href="#home" class="header__menu-link" data-i18n="nav-main"
+            >main</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a href="#about" class="header__menu-link" data-i18n="nav-about"
+            >about</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a href="#feature" class="header__menu-link" data-i18n="nav-features"
+            >game features</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a
+            href="#system"
+            class="header__menu-link"
+            data-i18n="nav-requirements"
+            >system requirements</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a href="#quotes" class="header__menu-link" data-i18n="nav-quotes"
+            >quotes</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__active">
+      <div class="header__active-btns">
+        <button
+          class="header__switch-lang lang-btn"
+          data-lang="en"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-controls="lang-list"
+          aria-label="Select language"
+          data-i18n="nav-lang-aria"
+          data-i18n-attr="aria-label"
+        >
+          EN<svg class="header__switch-icon" aria-hidden="true">
+            <use href="/icons.svg#chevron-down"></use>
+          </svg>
+        </button>
+        <ul class="header__switch-list" id="lang-list">
+          <li class="header__switch-item">
+            <button
+              class="header__switch-btn lang-btn"
+              aria-label="Русский"
+              lang="ru"
+            >
+              RU
+            </button>
+          </li>
+          <li class="header__switch-item">
+            <button
+              class="header__switch-btn lang-btn"
+              aria-label="Français"
+              lang="fr"
+            >
+              FR
+            </button>
+          </li>
+          <li class="header__switch-item">
+            <button
+              class="header__switch-btn lang-btn"
+              aria-label="Deutsch"
+              lang="de"
+            >
+              DE
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <span class="header__active-divider" aria-hidden="true"></span>
+
+      <div class="header__active-links">
+        <a
+          href="/"
+          class="header__active-link"
+          aria-label="Xbox store"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg>
+            <use href="/icons.svg#x-box"></use>
+          </svg>
+        </a>
+        <a
+          href="/"
+          class="header__active-link"
+          aria-label="Steam"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-darkreader-ignore
+        >
+          <svg data-darkreader-ignore>
+            <use href="/icons.svg#steam"></use>
+          </svg>
+        </a>
+      </div>
+      <button
+        class="header__burger burger__btn"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="burger__btn-line"></span>
+      </button>
+    </div>
+  </div>
+</header>

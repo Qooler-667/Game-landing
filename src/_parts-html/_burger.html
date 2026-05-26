@@ -1,0 +1,43 @@
+<div class="burger--wrapper" aria-hidden="true">
+  <div
+    class="burger"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Navigation menu"
+  >
+    <button class="burger__exit" aria-label="Close menu">
+      <span class="burger__exit-line"></span>
+    </button>
+    <nav class="burger__menu" aria-label="Main navigation">
+      <ul class="burger__menu-list">
+        <li class="burger__menu-item">
+          <a href="#home" class="burger__menu-link">main</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#about" class="burger__menu-link">about</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#feature" class="burger__menu-link">game features</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#system" class="burger__menu-link">system requirements</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#quotes" class="burger__menu-link">quotes</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="burger__active">
+      <a href="/" class="burger__active-link" aria-label="Xbox store">
+        <svg>
+          <use href="/icons.svg#x-box"></use>
+        </svg>
+      </a>
+      <a href="/" class="burger__active-link" aria-label="Steam">
+        <svg>
+          <use href="/icons.svg#steam"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

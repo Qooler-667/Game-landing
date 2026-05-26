@@ -1,0 +1,174 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.quotes {
+  @include flex;
+  width: 100%;
+  min-height: 100dvh;
+  position: relative;
+
+  @include bg-overlay(
+    '/quote-bg.webp',
+    (
+      circle at 30% 50%,
+      rgba($white-rgb, 0) 0%,
+      rgba($black-rgb, 0.2) 10%,
+      $base-black 100%
+    ),
+    $overlay-bg: rgba($black-rgb, 0.1)
+  );
+
+  &__container {
+    @include flex($gap: 30px);
+  }
+
+  &__content {
+    @include flex(column, center, start, 50px);
+    width: 50%;
+    min-width: 349px;
+  }
+
+  &__hgroup {
+    margin-bottom: 0;
+  }
+
+  &__review {
+    @include flex(column, $gap: 30px);
+    width: 50%;
+    min-width: 349px;
+  }
+
+  &__card {
+    @include flex(column, start, start);
+    width: 100%;
+    max-width: 455px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba($white-rgb, 0.1);
+
+    &:nth-child(odd) {
+      margin-left: auto;
+    }
+
+    &-header {
+      @include flex;
+      width: 100%;
+      margin-bottom: 30px;
+      position: relative;
+
+      &:after {
+        @include position(absolute, 1px, 4px);
+        content: '';
+        display: block;
+        width: 63px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: $light-orange;
+        z-index: -1;
+      }
+    }
+
+    &-user {
+      @include flex(column, start, start);
+      margin-right: auto;
+    }
+
+    &-img {
+      width: 60px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    &-name {
+      @include font-style(
+        $dark-orange,
+        $font-main,
+        $fsize-24,
+        $fweight-bold,
+        0.08em,
+        $t-transform: uppercase
+      );
+    }
+
+    &-role {
+      @include font-style(
+        $base-white,
+        $font-second,
+        $fsize-18,
+        $fweight-regular,
+        null,
+        122%
+      );
+      opacity: 0.5;
+    }
+
+    &-link {
+      @include flex;
+      width: 30px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      margin-bottom: auto;
+
+      @media (hover: hover) {
+        &:hover {
+          .quotes__card-icon {
+            --color-1: #{$light-orange};
+          }
+        }
+      }
+    }
+
+    &-icon {
+      @include icon-style(20px, 20px, rgba($white-rgb, 0.8));
+    }
+
+    &-text {
+      @include font-style(
+        $base-white,
+        $font-second,
+        $fsize-18,
+        $fweight-regular
+      );
+      margin-bottom: 20px;
+    }
+
+    &-date {
+      @include font-style(
+        rgba($white-rgb, 0.7),
+        $font-second,
+        14px,
+        $fweight-regular
+      );
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    &__container {
+      flex-wrap: wrap;
+      height: auto;
+    }
+
+    &__content {
+      width: 100%;
+      min-width: 0;
+      padding-block: 30px;
+
+      &-btn {
+        margin-inline: auto;
+      }
+    }
+
+    &__review {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__review {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+}

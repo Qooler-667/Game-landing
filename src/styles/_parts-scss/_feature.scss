@@ -1,0 +1,131 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.feature {
+  @include flex;
+  width: 100%;
+  height: clamp(720px, 48vw, 960px);
+  position: relative;
+
+  @include bg-overlay(
+    '/feature-bg.webp',
+    (
+      circle at 40% 40%,
+      rgba($white-rgb, 0) 0%,
+      rgba($black-rgb, 0.5) 40%,
+      rgba($black-rgb, 1) 70%,
+      $base-black 100%
+    ),
+    $overlay-bg: rgba($black-rgb, 0.3)
+  );
+
+  &__container {
+    @include flex(column, center, end);
+  }
+
+  &__desc {
+    margin-right: 10%;
+  }
+
+  &__list {
+    @include flex(column, start, start, 10px);
+    max-width: 480px;
+
+    &-item {
+      @include flex(column, start, start);
+      max-width: 480px;
+      height: auto;
+      padding-bottom: 10px;
+
+      &:hover {
+        .feature__item-btn::before {
+          animation: trim 0.5s ease-out infinite;
+        }
+      }
+
+      &.active {
+        .feature__item-btn::before {
+          background: $dark-orange;
+          animation: none;
+        }
+        .feature__item-content {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  @keyframes trim {
+    0% {
+      transform: translateY(-5px);
+    }
+
+    99% {
+      transform: translateY(1px);
+    }
+
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__item-btn {
+    @include font-style(
+      $dark-orange,
+      $font-main,
+      $fsize-36,
+      $fweight-bold,
+      0.06em,
+      $t-transform: uppercase
+    );
+    text-align: start;
+    position: relative;
+
+    &:before {
+      content: '';
+      @include position(absolute, 50%, -25px);
+      transform: translateY(-50%);
+      display: block;
+      width: clamp(8px, 1.2vw, 15px);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 2px solid $base-white;
+    }
+  }
+
+  &__item-content {
+    @include font_style(
+      $base-white,
+      $font-second,
+      $fsize-18,
+      $fweight-regular,
+      null,
+      122%
+    );
+    max-width: 365px;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.2s ease;
+  }
+
+  @media (max-width: 768px) {
+    &::after {
+      background-position: 30%;
+    }
+
+    &__desc {
+      margin-right: 0;
+      margin-left: 30px;
+    }
+
+    &__item-btn {
+      letter-spacing: 0.1em;
+
+      &::before {
+        left: -20px;
+      }
+    }
+  }
+}

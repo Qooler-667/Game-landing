@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="darkreader-lock" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SOS - захватывающая многопользовательская игра в жанре королевской битвы. Сражайтесь, выживайте на опасном острове и находите друзей, чтобы сбежать. Играйте в SOS прямо сейчас!"
+    />
+    <title>SOS Game | Social Battle Royale</title>
+    <link rel="icon" href="./logo.webp" type="image/webp" />
+    <script type="module" crossorigin src="./assets/index-nnXCYFxy.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-d7JmAUam.css">
+  </head>
+
+  <body>
+    <header class="header">
+  <div class="container header__container">
+    <a
+      href="#home"
+      class="header__logo"
+      aria-label="to Home"
+      data-i18n="nav-logo-aria"
+      data-i18n-attr="aria-label"
+    >
+      <img src="logo.webp" class="header__logo-img" alt="Logo SOS Game" />
+    </a>
+
+    <nav class="header__menu" aria-label="Main-menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <a href="#home" class="header__menu-link" data-i18n="nav-main"
+            >main</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a href="#about" class="header__menu-link" data-i18n="nav-about"
+            >about</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a href="#feature" class="header__menu-link" data-i18n="nav-features"
+            >game features</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a
+            href="#system"
+            class="header__menu-link"
+            data-i18n="nav-requirements"
+            >system requirements</a
+          >
+        </li>
+        <li class="header__menu-item">
+          <a href="#quotes" class="header__menu-link" data-i18n="nav-quotes"
+            >quotes</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__active">
+      <div class="header__active-btns">
+        <button
+          class="header__switch-lang lang-btn"
+          data-lang="en"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-controls="lang-list"
+          aria-label="Select language"
+          data-i18n="nav-lang-aria"
+          data-i18n-attr="aria-label"
+        >
+          EN<svg class="header__switch-icon" aria-hidden="true">
+            <use href="./icons.svg#chevron-down"></use>
+          </svg>
+        </button>
+        <ul class="header__switch-list" id="lang-list">
+          <li class="header__switch-item">
+            <button
+              class="header__switch-btn lang-btn"
+              aria-label="Русский"
+              lang="ru"
+            >
+              RU
+            </button>
+          </li>
+          <li class="header__switch-item">
+            <button
+              class="header__switch-btn lang-btn"
+              aria-label="Français"
+              lang="fr"
+            >
+              FR
+            </button>
+          </li>
+          <li class="header__switch-item">
+            <button
+              class="header__switch-btn lang-btn"
+              aria-label="Deutsch"
+              lang="de"
+            >
+              DE
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <span class="header__active-divider" aria-hidden="true"></span>
+
+      <div class="header__active-links">
+        <a
+          href="/"
+          class="header__active-link"
+          aria-label="Xbox store"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg>
+            <use href="./icons.svg#x-box"></use>
+          </svg>
+        </a>
+        <a
+          href="/"
+          class="header__active-link"
+          aria-label="Steam"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-darkreader-ignore
+        >
+          <svg data-darkreader-ignore>
+            <use href="./icons.svg#steam"></use>
+          </svg>
+        </a>
+      </div>
+      <button
+        class="header__burger burger__btn"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="burger__btn-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      <section class="home" id="home">
+  <div class="container home__container">
+    <div class="home__content">
+      <div class="home__hgroup hgroup">
+        <h1 class="home__hgroup-title" data-i18n="home-title">
+          SURVIVE AT ALL COSTS
+        </h1>
+        <p class="home__hgroup-subtitle subtitle" data-i18n="home-subtitle">
+          Experience new social battle royale game
+        </p>
+      </div>
+
+      <a
+        href="/"
+        class="home__btn btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span data-i18n="home-buy-btn">Buy Now on Steam</span>
+        <span class="home__btn-divider btn-divider" aria-hidden="true"></span>
+        <span data-i18n="home-price">$14.99</span>
+      </a>
+    </div>
+    <a href="#about" class="home__story-btn">
+      <span data-i18n="home-story">The story</span>
+      <svg aria-hidden="true">
+        <use href="./icons.svg#treangle-down"></use>
+      </svg>
+    </a>
+  </div>
+</section>
+
+      <section class="about" id="about">
+  <div class="container about__container">
+    <div class="about__desc">
+      <div class="about__desc-hgroup hgroup">
+        <h2 class="about__desc-title" data-i18n="about-title">
+          social battle royale game
+        </h2>
+        <p class="about__desc-subtitle subtitle" data-i18n="about-subtitle">
+          What is SOS?
+        </p>
+      </div>
+      <hr class="about__desc-divider" />
+      <p class="about__desc-text" data-i18n="about-text">
+        Each round, you and 15 other contestants compete to escape a deadly
+        island filled with monsters. The trick is: three people can survive.
+        Will you run solo or form friendships with others to escape? <br />
+        <br />
+        Making the right decisions could be the difference between life and
+        death.
+      </p>
+    </div>
+
+    <div class="about__slider" id="slider">
+      <div class="about__slider-track">
+        <div class="about__slider-card">
+          <img src="./slide-1.webp" alt="Game screenshot" />
+        </div>
+        <div class="about__slider-card">
+          <img src="./slide-2.webp" alt="Game screenshot" />
+        </div>
+        <div class="about__slider-card">
+          <img src="./slide-3.webp" alt="Game screenshot" />
+        </div>
+        <div class="about__slider-card">
+          <img src="./slide-1.webp" alt="Game screenshot" />
+        </div>
+        <div class="about__slider-card">
+          <img src="./slide-2.webp" alt="Game screenshot" />
+        </div>
+      </div>
+      <div class="about__slider-ctrl">
+        <button
+          class="about__slider-btn slider__btn prev-btn"
+          data-i18n="about-slider-prev-aria"
+          data-i18n-attr="aria-label"
+          aria-label="Previous slide"
+        >
+          <svg class="slider__btn-icon">
+            <use href="./icons.svg#switch-prev"></use>
+          </svg>
+        </button>
+        <button
+          class="about__slider-btn slider__btn next-btn"
+          data-i18n="about-slider-next-aria"
+          data-i18n-attr="aria-label"
+          aria-label="Next slide"
+        >
+          <svg class="slider__btn-icon">
+            <use href="./icons.svg#switch-next"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="feature" id="feature">
+  <div class="container feature__container">
+    <div class="feature__desc">
+      <div class="feature__hgroup hgroup">
+        <h2 class="feature__hgroup-title" data-i18n="feat-title">features</h2>
+        <p class="feature__hgroup-subtitle subtitle" data-i18n="feat-subtitle">
+          What’s so special ?
+        </p>
+      </div>
+
+      <ul class="feature__list">
+        <li class="feature__list-item">
+          <button class="feature__item-btn" data-i18n="feat-btn-1">
+            SURVIVE AT ALL COSTS
+          </button>
+          <div class="feature__item-content">
+            <p data-i18n="feat-desc-1">
+              You have 30 minutes to find a relic, signal for extraction, and
+              grab one of three spots on the rescue chopper.
+            </p>
+          </div>
+        </li>
+        <li class="feature__list-item">
+          <button class="feature__item-btn" data-i18n="feat-btn-2">
+            CREATE ALLIES AND ENEMIES
+          </button>
+          <div class="feature__item-content">
+            <p data-i18n="feat-desc-2">
+              You have 30 minutes to find a relic, signal for extraction, and
+              grab one of three spots on the rescue chopper.
+            </p>
+          </div>
+        </li>
+        <li class="feature__list-item">
+          <button class="feature__item-btn" data-i18n="feat-btn-3">
+            IMPRESS THE AUDIENCE
+          </button>
+          <div class="feature__item-content">
+            <p data-i18n="feat-desc-3">
+              You have 30 minutes to find a relic, signal for extraction, and
+              grab one of three spots on the rescue chopper.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <section class="system" id="system">
+  <div class="container system__container">
+    <div class="system__hgroup hgroup">
+      <h1 class="system__hgroup-title" data-i18n="sys-title">
+        system requirements
+      </h1>
+      <p class="system__hgroup-subtitle subtitle" data-i18n="sys-subtitle">
+        Can My Computer Run this game ?
+      </p>
+    </div>
+    <div class="system__content">
+      <ul class="system__list">
+        <li class="system__item">
+          <span data-i18n="sys-os">OS:</span>
+          <p data-i18n="sys-os-desc">
+            Windows 7 64-bit only (No OSX support at this time)
+          </p>
+        </li>
+        <li class="system__item">
+          <span data-i18n="sys-processor">PROCESSOR:</span>
+          <p>Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ</p>
+        </li>
+        <li class="system__item">
+          <span data-i18n="sys-memory">MEMORY:</span>
+          <p>8 GB RAM</p>
+        </li>
+        <li class="system__item">
+          <span data-i18n="sys-storage">STORAGE:</span>
+          <p>8 GB available space</p>
+        </li>
+        <li class="system__item full-width">
+          <span data-i18n="sys-graphics">GRAPHICS:</span>
+          <p>
+            NVIDIA GeForce GTX 660 2GB or<br />
+            AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <section class="quotes" id="quotes">
+  <div class="container quotes__container">
+    <div class="quotes__content">
+      <div class="quotes__hgroup hgroup">
+        <h1 class="quotes__hgroup-title" data-i18n="quotes-title">
+          Press quotes
+        </h1>
+        <p class="quotes__hgroup-subtitle subtitle" data-i18n="quotes-subtitle">
+          What people think?
+        </p>
+      </div>
+      <p class="quotes__content-text" data-i18n="quotes-text">
+        Our goal is to create a product and service that you’re satisfied with
+        and use it every day. This is why we’re constantly working on our
+        services to make it better every day and really listen to what our users
+        has to say.
+      </p>
+      <button class="quotes__content-btn btn" data-i18n="quotes-btn">
+        Read more testimonials
+      </button>
+    </div>
+
+    <div class="quotes__review">
+      <div class="quotes__card">
+        <div class="quotes__card-header">
+          <img
+            class="quotes__card-img"
+            src="quotes-img1.webp"
+            alt="user-image"
+          />
+          <p class="quotes__card-user">
+            <span class="quotes__card-name">Evan Lahti</span>
+            <span class="quotes__card-role">PC Gamer</span>
+          </p>
+
+          <a
+            class="quotes__card-link"
+            href="/"
+            data-i18n="link-twitter"
+            data-i18n-attr="aria-label"
+          >
+            <svg class="quotes__card-icon" aria-hidden="true">
+              <use href="./icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </div>
+
+        <p class="quotes__card-text" data-i18n="quote-text-1">
+          “One of my gaming highlights of the year.”
+        </p>
+        <time class="quotes__card-date" data-i18n="quote-date-1"
+          >October 18, 2018</time
+        >
+      </div>
+
+      <div class="quotes__card">
+        <div class="quotes__card-header">
+          <img
+            class="quotes__card-img"
+            src="quotes-img2.webp"
+            alt="user-image"
+          />
+          <p class="quotes__card-user">
+            <span class="quotes__card-name">Jada Griffin</span>
+            <span class="quotes__card-role">Nerdreactor</span>
+          </p>
+
+          <a
+            class="quotes__card-link"
+            href="/"
+            data-i18n="link-twitter"
+            data-i18n-attr="aria-label"
+          >
+            <svg class="quotes__card-icon" aria-hidden="true">
+              <use href="./icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </div>
+
+        <p class="quotes__card-text" data-i18n="quote-text-2">
+          “The next big thing in the world of streaming and survival games.”
+        </p>
+        <time class="quotes__card-date" data-i18n="quote-date-2"
+          >December 21, 2018</time
+        >
+      </div>
+
+      <div class="quotes__card">
+        <div class="quotes__card-header">
+          <img
+            class="quotes__card-img"
+            src="quotes-img3.webp"
+            alt="user-image"
+          />
+          <p class="quotes__card-user">
+            <span class="quotes__card-name">Aaron Williams </span>
+            <span class="quotes__card-role">Uproxx</span>
+          </p>
+
+          <a
+            class="quotes__card-link"
+            href="/"
+            data-i18n="link-twitter"
+            data-i18n-attr="aria-label"
+          >
+            <svg class="quotes__card-icon" aria-hidden="true">
+              <use href="./icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </div>
+
+        <p class="quotes__card-text" data-i18n="quote-text-3">
+          “Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.”
+        </p>
+        <time class="quotes__card-date" data-i18n="quote-date-3"
+          >December 24, 2018</time
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="connect">
+  <div class="container connect__container">
+    <div class="connect__content">
+      <div class="connect__hgroup hgroup">
+        <h2 class="connect__hgroup-title" data-i18n="conn-title">
+          NEWSLETTER SUBSCRIBE
+        </h2>
+        <p class="connect__hgroup-subtitle subtitle" data-i18n="conn-subtitle">
+          Want to stay in touch?
+        </p>
+      </div>
+      <p class="connect__content-text" data-i18n="conn-text">
+        In order to start receiving our news, all you have to do is enter your
+        email address. Everything else will be taken care of by us. We will send
+        you emails containing information about game. We don’t spam.
+      </p>
+
+      <form class="connect__form" action="get">
+        <input
+          class="connect__form-field"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="your Email adress"
+          required
+        />
+
+        <button
+          class="connect__form-btn btn"
+          type="submit"
+          data-i18n="conn-btn"
+        >
+          Subscribe now
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+      <div class="burger--wrapper" aria-hidden="true">
+  <div
+    class="burger"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Navigation menu"
+  >
+    <button class="burger__exit" aria-label="Close menu">
+      <span class="burger__exit-line"></span>
+    </button>
+    <nav class="burger__menu" aria-label="Main navigation">
+      <ul class="burger__menu-list">
+        <li class="burger__menu-item">
+          <a href="#home" class="burger__menu-link">main</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#about" class="burger__menu-link">about</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#feature" class="burger__menu-link">game features</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#system" class="burger__menu-link">system requirements</a>
+        </li>
+        <li class="burger__menu-item">
+          <a href="#quotes" class="burger__menu-link">quotes</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="burger__active">
+      <a href="/" class="burger__active-link" aria-label="Xbox store">
+        <svg>
+          <use href="./icons.svg#x-box"></use>
+        </svg>
+      </a>
+      <a href="/" class="burger__active-link" aria-label="Steam">
+        <svg>
+          <use href="./icons.svg#steam"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__content">
+      <a href="#home" class="footer__logo" aria-label="to Home">
+        <img src="logo.webp" class="footer__logo-img" alt="Logo SOS Game" />
+      </a>
+      <nav class="footer__menu" aria-label="Main-menu">
+        <ul class="footer__menu-list">
+          <li class="footer__menu-item">
+            <a href="#home" class="footer__menu-link" data-i18n="nav-main"
+              >main</a
+            >
+          </li>
+          <li class="footer__menu-item">
+            <a href="#about" class="footer__menu-link" data-i18n="nav-about"
+              >about</a
+            >
+          </li>
+          <li class="footer__menu-item">
+            <a
+              href="#feature"
+              class="footer__menu-link"
+              data-i18n="nav-features"
+              >game features</a
+            >
+          </li>
+          <li class="footer__menu-item">
+            <a
+              href="#system "
+              class="footer__menu-link"
+              data-i18n="nav-requirements"
+              >system requirements</a
+            >
+          </li>
+          <li class="footer__menu-item">
+            <a href="#quotes" class="footer__menu-link" data-i18n="nav-quotes"
+              >quotes</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a href="/" class="footer__social-link">
+            <svg>
+              <use href="./icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="/" class="footer__social-link">
+            <svg>
+              <use href="./icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="/" class="footer__social-link">
+            <svg class="youtube-icon">
+              <use href="./icons.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="/" class="footer__social-link">
+            <svg>
+              <use href="./icons.svg#twitch"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <hr class="footer__container-divider" />
+
+    <div class="footer__policy">
+      <p class="footer__policy-copyright">
+        &copy; 2018 Outpost Games, Inc. All Rights Reserved
+      </p>
+      <ul class="footer__policy-list">
+        <li class="footer__policy-item">
+          <a href="/" class="footer__policy-link" data-i18n="foot-privacy"
+            >Privacy Policy</a
+          >
+        </li>
+
+        <li class="footer__policy-item">
+          <a href="/" class="footer__policy-link" data-i18n="foot-terms"
+            >Terms of Services</a
+          >
+        </li>
+
+        <li class="footer__policy-item">
+          <a href="/" class="footer__policy-link" data-i18n="foot-code"
+            >Code of Conduct</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+:root {
+  --base-white: #fff;
+  --base-black: #000;
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+
+  --light-orange: #ffc772;
+  --dark-orange: #d68b00;
+  --orange-rgb: 253, 190, 95;
+  --gray-color: #979797;
+  --grad-color: 52, 44, 29;
+  --input-color: #292929;
+}
+
+$base-white: var(--base-white);
+$base-black: var(--base-black);
+$white-rgb: var(--white-rgb);
+$black-rgb: var(--black-rgb);
+
+$dark-orange: var(--dark-orange);
+$light-orange: var(--light-orange);
+$orange-rgb: var(--orange-rgb);
+$grey-color: var(--gray-color);
+$grad-color: var(--grad-color);
+$input-color: var(--input-color);
+
+$font-main: 'BebasNeue', sans-serif;
+$font-second: 'OpenSans', sans-serif;
+$font-accent: 'SfUiText', sans-serif;
+
+$fsize-main: 16px;
+$fsize-h1: clamp(36px, 5vw, 80px);
+$fsize-h2: clamp(30px, 5vw, 74px);
+$fsize-subtitle: clamp(18px, 1.7vw, 24px);
+$fsize-16: clamp(14px, 1.1vw, 16px);
+$fsize-18: clamp(14px, 1.2vw, 18px);
+$fsize-24: clamp(18px, 5vw, 24px);
+$fsize-36: clamp(20px, 3vw, 36px);
+
+$fweight-bold: 700;
+$fweight-SemiBold: 600;
+$fweight-regular: 400;

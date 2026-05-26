@@ -1,0 +1,23 @@
+{
+  "name": "my-awesome-project",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "cheerio": "^1.2.0",
+    "postcss-sort-media-queries": "^6.6.1",
+    "sass": "^1.99.0",
+    "sharp": "^0.34.5",
+    "svgo": "^4.0.1",
+    "ttf2woff2": "^8.0.1",
+    "vite": "^8.0.12",
+    "vite-plugin-html-inject": "^1.1.2",
+    "vite-plugin-image-optimizer": "^2.0.3"
+  }
+}

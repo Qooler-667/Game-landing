@@ -1,0 +1,239 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.lang-btn {
+  @include btn-style($padding: 5px);
+  gap: 10px;
+  svg {
+    @include icon-style(12px, 7px, transparent, $str1: $base-white);
+    transition: 0.3s;
+  }
+  @include font-style(
+    $base-white,
+    $font-second,
+    $fsize-18,
+    $fweight-SemiBold,
+    $t-transform: uppercase
+  );
+  transition: 0.3s;
+  @media (hover: hover) {
+    &:hover {
+      color: $dark-orange;
+    }
+  }
+}
+
+.burger__btn {
+  @include btn-style(32px, 32px);
+
+  @media (hover: hover) {
+    &:hover {
+      .burger__btn-line {
+        background: $dark-orange;
+      }
+      .burger__btn-line::after,
+      .burger__btn-line::before {
+        width: 28px;
+        background: $dark-orange;
+      }
+    }
+  }
+
+  &-line {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 4px;
+    transition: 0.3s;
+
+    &::before,
+    &::after {
+      @include position(absolute, -8px, null, null, 0);
+      content: '';
+      display: block;
+      width: 28px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+    &::after {
+      @include position(absolute, 8px, null, null, 0);
+      width: 18px;
+    }
+  }
+}
+
+.burger__exit {
+  @include btn-style(
+    26px,
+    26px,
+    null,
+    transparent,
+    1px solid rgba($white-rgb, 0.3),
+    8px
+  );
+  margin-left: auto;
+  box-shadow: 0 0 1px $base-white;
+  transition: 0.3s;
+
+  &-line {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: $light-orange;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    transition: 0.3s;
+
+    &::after {
+      @include position(absolute, 0, 0);
+      content: '';
+      display: block;
+      width: inherit;
+      height: inherit;
+      background: inherit;
+      border-radius: inherit;
+      transform: rotate(90deg);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 1px $light-orange;
+      .burger__exit-line {
+        background: rgb(255, 50, 50);
+      }
+    }
+  }
+}
+
+// header/footer/burger menu-link
+.header__menu-link,
+.footer__menu-link,
+.burger__menu-link {
+  @include font-style(
+    $base-white,
+    $font-second,
+    $fsize-16,
+    $fweight-bold,
+    0.12em,
+    $t-transform: uppercase
+  );
+
+  white-space: wrap;
+  text-align: center;
+  transition: color 0.3s;
+  @media (hover: hover) {
+    &:hover {
+      color: $dark-orange;
+    }
+  }
+}
+
+.burger__menu-link {
+  font-size: 18px;
+}
+
+// header/burger - active-link
+.header__active-link,
+.burger__active-link {
+  @include flex;
+  border-radius: 100%;
+  transition: 0.3s;
+
+  &:first-child {
+    svg {
+      @include icon-style(30px, 30px, $light-orange, $light-orange);
+    }
+  }
+
+  &:last-child {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    background: $light-orange;
+    svg {
+      @include icon-style(
+        24px,
+        24px,
+        rgba($black-rgb, 0.6),
+        rgba($black-rgb, 0.6)
+      );
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover:first-child svg {
+      --color-1: #{$base-white};
+      --color-2: #{$base-white};
+    }
+    &:hover:last-child {
+      background: $base-white;
+      svg {
+        --color-1: #{$base-black};
+        --color-2: #{$base-black};
+      }
+    }
+  }
+}
+
+.btn {
+  @include btn-style(
+    max-content,
+    null,
+    clamp(10px, 1.4vw, 18px) clamp(20px, 3vw, 30px),
+    $light-orange,
+    null,
+    4px
+  );
+  gap: 12px;
+  transition: all 0.4s;
+
+  @include font-style(
+    $base-black,
+    $font-second,
+    $fsize-16,
+    $fweight-bold,
+    null,
+    null
+  );
+  white-space: nowrap;
+  transition: all 0.4s;
+
+  &-divider {
+    display: inline-block;
+    width: 1px;
+    height: 24px;
+    border: none;
+    background: $base-black;
+    transition: all 0.3s;
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: $base-white;
+      background: $base-black;
+      box-shadow: 0 0 1px 1px $base-white;
+      .btn-divider {
+        background: $base-white;
+      }
+    }
+  }
+}
+
+// === slider-btn ===
+.slider__btn {
+  @include btn-style(36px, 36px);
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        --stroke-1: #{$dark-orange};
+      }
+    }
+  }
+  &-icon {
+    @include icon-style(20px, 34px, transparent, $str1: $base-white);
+  }
+}

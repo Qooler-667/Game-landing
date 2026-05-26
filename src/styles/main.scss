@@ -1,0 +1,14 @@
+@use 'reset';
+@use 'fonts';
+@use 'global';
+@use 'buttons';
+
+@use '_parts-scss/header';
+@use '_parts-scss/home';
+@use '_parts-scss/about';
+@use '_parts-scss/feature';
+@use '_parts-scss/system';
+@use '_parts-scss/quotes';
+@use '_parts-scss/connect';
+@use '_parts-scss/footer';
+@use '_parts-scss/burger';

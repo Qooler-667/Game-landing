@@ -1,0 +1,60 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.burger--wrapper {
+  @include position(absolute, 0, 0);
+  @include flex;
+  width: 100%;
+  height: 100vh;
+  background: rgba($black-rgb, 0.3);
+  backdrop-filter: blur(3px);
+  perspective: 1000px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+
+    .burger {
+      transform: translateZ(0) rotateY(0) scale(1);
+    }
+  }
+}
+
+.burger {
+  @include flex(column, start, start, $gap: 30px);
+  width: clamp(300px, 3vw, 400px);
+  aspect-ratio: 1 / 1.5;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 1px 1px $base-white;
+  background: rgba($black-rgb, 0.3);
+  backdrop-filter: blur(3px);
+  transform: translateZ(-800px) rotateY(90deg) scale(0.5);
+  transform-origin: center;
+  transition: transform 0.5s;
+  will-change: transform;
+
+  &__menu {
+    width: 100%;
+    padding-inline: 20px;
+
+    &-list {
+      @include flex(column, $align: start, $gap: 30px);
+      margin-bottom: 20px;
+    }
+    &-link {
+      text-align: start;
+      text-indent: 0;
+      line-height: 1.5em;
+    }
+  }
+
+  &__active {
+    @include flex($gap: 30px);
+    margin-inline: auto;
+    margin-bottom: 20px;
+  }
+}

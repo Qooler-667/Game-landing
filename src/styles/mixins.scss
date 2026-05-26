@@ -1,0 +1,192 @@
+@use 'vars' as *;
+
+@mixin font-style(
+  $color: null,
+  $font: $font-main,
+  $f-size: $fsize-main,
+  $f-weight: 400,
+  $l-spacing: null,
+  $l-height: null,
+  $t-transform: null,
+  $t-indent: $l-spacing
+) {
+  color: $color;
+  font-family: $font;
+  font-size: $f-size;
+  font-weight: $f-weight;
+  letter-spacing: $l-spacing;
+  line-height: $l-height;
+  text-transform: $t-transform;
+  @if $t-indent {
+    text-indent: $t-indent;
+  }
+
+  @content;
+}
+
+// === Position ===
+
+@mixin flex($f-direct: row, $justify: center, $align: center, $gap: null) {
+  display: flex;
+  flex-direction: $f-direct;
+  justify-content: $justify;
+  align-items: $align;
+  @if $gap {
+    gap: $gap;
+  }
+  @content;
+}
+
+@mixin grid(
+  $cols: 1,
+  $rows: none,
+  $gap: null,
+  $align: stretch,
+  $justify: stretch
+) {
+  display: grid;
+  grid-template-columns: $cols;
+
+  @if $rows != none {
+    grid-template-rows: $rows;
+  }
+
+  gap: $gap;
+  align-items: $align;
+  justify-items: $justify;
+
+  @content;
+}
+
+@mixin position(
+  $position: null,
+  $top: null,
+  $left: null,
+  $bottom: null,
+  $right: null,
+  $t-translate: null,
+  $z-index: null
+) {
+  position: $position;
+  @if $top {
+    top: $top;
+  }
+  @if $left {
+    left: $left;
+  }
+  @if $bottom {
+    bottom: $bottom;
+  }
+  @if $right {
+    right: $right;
+  }
+
+  @if $t-translate {
+    transform: translate($t-translate);
+  }
+  z-index: $z-index;
+
+  @content;
+}
+
+// === Icon ===
+@mixin icon-style(
+  $width: 100%,
+  $height: 100%,
+  $c1: null,
+  $c2: null,
+  $c3: null,
+  $c4: null,
+  $str1: null,
+  $str2: null,
+  $str3: null,
+  $str4: null
+) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+
+  @if $c1 {
+    --color-1: #{$c1};
+  }
+  @if $c2 {
+    --color-2: #{$c2};
+  }
+  @if $c3 {
+    --color-3: #{$c3};
+  }
+  @if $c4 {
+    --color-4: #{$c4};
+  }
+
+  @if $str1 {
+    --stroke-1: #{$str1};
+  }
+  @if $str2 {
+    --stroke-2: #{$str2};
+  }
+  @if $str3 {
+    --stroke-3: #{$str3};
+  }
+  @if $str4 {
+    --stroke-4: #{$str4};
+  }
+
+  @content;
+}
+
+@mixin btn-style(
+  $width: null,
+  $height: null,
+  $padding: null,
+  $bg: inherit,
+  $brdr: null,
+  $radius: null
+) {
+  @include flex;
+  width: $width;
+  height: $height;
+  padding: $padding;
+  border: $brdr;
+  border-radius: $radius;
+  background: $bg;
+}
+
+@mixin line-gradient(
+  $content: '',
+  $width: 80%,
+  $color: rgba($black-rgb, 0.7),
+  $height: 1px,
+  $bg: linear-gradient(to right, transparent, $color, transparent)
+) {
+  content: $content;
+  width: $width;
+  height: $height;
+  background: $bg;
+  @include position(absolute, $left: 50%, $bottom: 0, $t-translate: (-50%, 0));
+}
+
+// === background-overlay ===
+@mixin bg-overlay($img-url, $gradient, $overlay-bg: null) {
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include position(absolute, 0, 0);
+  }
+  &:after {
+    z-index: -99;
+    background-image: radial-gradient($gradient), url($img-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &::before {
+    z-index: -98;
+    background: $overlay-bg;
+  }
+
+  @content;
+}

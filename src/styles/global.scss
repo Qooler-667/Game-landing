@@ -1,0 +1,96 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  background: rgb(0, 0, 0);
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  background: transparent;
+}
+
+section {
+  min-height: 100dvh;
+  padding-bottom: 50px;
+
+  @media (max-width: 768px) {
+    section {
+      height: auto;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 20px;
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.hgroup {
+  @include flex(column-reverse, center, start, $gap: 10px);
+  margin-bottom: 30px;
+}
+
+h1,
+h2 {
+  @include font-style(
+    $base-white,
+    $font-main,
+    $fsize-h1,
+    $fweight-bold,
+    0.04em,
+    null,
+    uppercase
+  );
+  @media (max-width: 768px) {
+    h1,
+    h2 {
+      letter-spacing: 0.08em;
+    }
+  }
+}
+
+h2 {
+  font-size: $fsize-h2;
+}
+
+.subtitle {
+  @include font-style(
+    $base-white,
+    $font-main,
+    $fsize-subtitle,
+    $fweight-bold,
+    0.08em,
+    null,
+    uppercase
+  );
+  text-align: center;
+  padding-inline: 10px;
+}
+
+p {
+  @include font-style(
+    $base-white,
+    $font-second,
+    $fsize-18,
+    $fweight-regular,
+    0,
+    122%
+  );
+}
